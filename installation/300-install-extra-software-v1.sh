@@ -18,6 +18,9 @@ sudo apt-get install -y dmenu
 # conky
 sudo apt-get install -y conky-all
 
+# geany
+sudo apt-get install -y geany
+
 # numerick lock on
 sudo apt-get install -y numlockx
 numlockx on
@@ -62,6 +65,9 @@ sudo apt-get install -y gmrun
 
 # rofi
 sudo apt-get install -y rofi
+
+# atom
+sudo apt-get install -y atom
 
 # screenshooters
 sudo apt-get install -y xfce4-screenshooter
