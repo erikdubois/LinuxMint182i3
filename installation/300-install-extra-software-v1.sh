@@ -7,11 +7,26 @@ set -e
 ##################################################################################################################
 
 echo "#########################################################"
+echo "General software"
+echo "#########################################################"
+
+
+sudo apt install -y firefox
+sudo apt install -y gimp 
+sudo apt install -y inkscape 
+sudo apt install -y meld 
+sudo apt install -y vlc 
+sudo apt install -y evolution
+
+
+
+echo "#########################################################"
 echo "Everything to work comfortably in i3 will be installed"
 echo "#########################################################"
 
 # core applications
 sudo apt-get install -y i3status i3lock
+
 #sudo apt-get install -y i3-wm
 sudo apt-get install -y dmenu
 
@@ -75,6 +90,7 @@ sudo apt-get install -y gnome-screenshot
 
 # nitrogen
 sudo apt-get install -y nitrogen
+
 
 
 # playerctl for music
