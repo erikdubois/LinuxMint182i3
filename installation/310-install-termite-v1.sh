@@ -33,8 +33,8 @@ sudo ldconfig
 sudo mkdir -p /lib/terminfo/x
 sudo ln -sf /usr/local/share/terminfo/x/xterm-termite  /lib/terminfo/x/xterm-termite
 
-
-
+rm -rf /tmp/vte-ng
+rm -rf /tmp/termite
 
 echo
 echo
