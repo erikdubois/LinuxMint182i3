@@ -1,6 +1,7 @@
 #=====================================================================================
 #                               aurora
-# Date    : 07/02/2016
+# Date    : 21/07/2017
+# Version : v2.0.1
 # Author  : Erik Dubois at http://www.erikdubois.be
 # Version : v3.0.2
 # License : Distributed under the terms of GNU GPL version 2 or later
@@ -9,8 +10,8 @@
 #======================================================================================
 
 #======================================================================================
-#                               
-# Source : https://plus.google.com/+RobertPartridge/ and 
+#
+# Source : https://plus.google.com/+RobertPartridge/ and
 # https://plus.google.com/u/0/+ThomasThompson/
 # Your work has been put to good use
 #======================================================================================
@@ -139,5 +140,3 @@ ${font Ubuntu:size=10}N E T W O R K   ${hr 2}${font}
 
 ${font StyleBats:size=20}q${font}${offset 8}${voffset -12}${color1}Network Up: ${color2}${alignr}${offset -10$}${upspeed enp2s0}${alignr}${upspeedgraph enp2s0 8,100}
 ${offset 30}${color1}Network Down: ${color2}${alignr}${offset -10$}${downspeed enp2s0}${alignr}${downspeedgraph enp2s0 8,100}
-
-

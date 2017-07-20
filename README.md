@@ -1,11 +1,13 @@
-# Installing i3 on Linux Mint 18.1 Cinnamon, Mate or Xfce
+# Installing i3 on Linux Mint 18.2 Cinnamon, Mate or Xfce
 
 I3 = [improved tiling windows manager](https://i3wm.org/) and this is its base of operations.
 
+Date    : 21/07/2017
+Version : v2.0.1
 
-## Installation of Linux Mint 18.1 Cinnamon, Mate or Xfce
+## Installation of Linux Mint 18.2 Cinnamon, Mate or Xfce
 
-We start from an up-to-date and clean install of Linux Mint 18.1 Cinnamon, XFCE or MATE as described on 
+We start from an up-to-date and clean install of Linux Mint 18.2 Cinnamon, XFCE or MATE as described on 
 http://erikdubois.be.
 
 Installation instructions for the [Installation of Linux Mint 18.1 Cinnamon](http://erikdubois.be/how-to-install-linux-mint-18-1-cinnamon-and-redesign-it/)
@@ -17,7 +19,7 @@ Installation instructions for the [Installation of Linux Mint 18.1 Xfce](http://
 When you follow these movies/articles and the installation scripts on github, you will end up with all the needed icons and applications you will see me use in the I3 tutorials.
 
 
-Linux Mint 18.1 
+Linux Mint 18.1
 
 ![Screenshots](http://i.imgur.com/mNenIjf.jpg)
 
@@ -55,7 +57,7 @@ Since I sometimes forget to make the script executable, I include here what you 
 
 A script can only run when it is marked as an executable.
 
-	ls -al 
+	ls -al
 
 Above code will reveal if a script has an "x". X meaning executable.
 Google "chmod" and "execute" and you will find more info.

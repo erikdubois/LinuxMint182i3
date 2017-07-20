@@ -1,14 +1,15 @@
 --[[
 #=====================================================================================
 #                               i3 on linux mint 18 cinnamon
-# Date    : 22/01/2017
+# Date    : 21/07/2017
+# Version : v2.0.1
 # Author  : Erik Dubois at http://www.erikdubois.be
 # License : Distributed under the terms of GNU GPL version 2 or later
 # Documentation English: http://erikdubois.be/category/linux/i3/
 #======================================================================================
 
 #======================================================================================
-#                               
+#
 # Source : c
 # alternative : sudo apt list --upgradable | wc -l
 #======================================================================================

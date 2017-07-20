@@ -1,137 +1,143 @@
+--[[
 #=====================================================================================
-#                               aurora
-# Date    : 07/02/2016
-# Author  : Erik Dubois at http://www.erikdubois.be
-# Version : v3.0.2
+#
+# Date    : 18/07/2017
+# Editor  : Erik Dubois - https://github.com/erikdubois/Aureola
+# Source  : Daniel Zet Google+
+# Version : v2.5.2
 # License : Distributed under the terms of GNU GPL version 2 or later
-# Documentation English: http://erikdubois.be/linux/install-conky-theme-aurora
-# Documentation Dutch: http://erikdubois.be/linux/conky
-#======================================================================================
+#=====================================================================================
+# CONKY
+# For commands in conky.config section:
+# http://conky.sourceforge.net/config_settings.html
+#
+# For commands in conky.text section:
+# http://conky.sourceforge.net/variables.html
+#
+# A PDF with all variables is provided
+#=====================================================================================
+# FONTS
+# To avoid copyright infringements you will have to download
+# and install the fonts yourself sometimes.
+#=====================================================================================
+# GENERAL INFO ABOUT FONTS
+# Go and look for a nice font on sites like http://www.dafont.com/
+# Download and unzip - double click the font to install it (font-manager must be installed)
+# No font-manager then put fonts in ~/.fonts
+# Change the font name in the conky
+# The name can be known with a command in the terminal: fc-list | grep "part of name"
+# Change width and height of the conky according to font
+# Reboot your system or fc-cache -fv in terminal
+# Enjoy
+#=====================================================================================
+# FONTS FOR THIS CONKY
+# no extra font(s) needed
+#=====================================================================================
+]]
 
-#======================================================================================
-#                               
-# Source : https://plus.google.com/+RobertPartridge/ and 
-# https://plus.google.com/u/0/+ThomasThompson/
-# Your work has been put to good use
-#======================================================================================
+conky.config = {
 
+	--Various settings
 
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,
+	diskio_avg_samples = 10,
+	double_buffer = true,
+	if_up_strictness = 'address',
+	net_avg_samples = 2,
+	no_buffers = true,
+	temperature_unit = 'celsius',
+	text_buffer_size = 2048,
+	update_interval = 1,
+	imlib_cache_size = 0,                       --spotify cover
 
-alignment middle_right
-background no
-border_inner_margin 0
-border_width 0
-default_color FFFFFF
-default_outline_color black
-default_shade_color black
-double_buffer yes
-draw_borders no
-draw_graph_borders no
-draw_outline no
-draw_shades no
-gap_x 25
-gap_y 50
-maximum_size 500 700
-no_buffers yes
-override_utf8_locale yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_transparent yes
-own_window yes
-own_window_type override
-own_window_class Conky
-own_window_argb_visual no
-pad_percents 2
-short_units yes
-stippled_borders 0
-top_name_width 5
-update_interval 1
-uppercase no
-use_spacer right
+	--Placement
 
+	alignment = 'top_left',
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 5,
+	gap_y = 5,
+	minimum_height = 1100,
+	minimum_width = 240,
+	maximum_width = 240,
 
+	--Graphical
 
+	border_inner_margin = 10, 					-- margin between border and text
+	border_outer_margin = 1, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,
+	default_bar_height = 10,
+	default_gauge_height = 25,
+	default_gauge_width =40,
+	default_graph_height = 40,
+	default_graph_width = 153,
+	default_shade_color = '#000000',
+	default_outline_color = '#000000',
+	draw_borders = false,						--draw borders around text
+	draw_graph_borders = true,
+	draw_shades = false,
+	draw_outline = false,
+	stippled_borders = 0,
 
-###Settings###
-background yes
-cpu_avg_samples 1
-default_bar_size 100 8
-default_graph_size 200 100
-diskio_avg_samples 10
-double_buffer yes
-extra_newline no
-if_up_strictness address
-net_avg_samples 1
-no_buffers yes
-temperature_unit celsius
-text_buffer_size 2048
-short_units yes
-update_interval 1
-###End Settings###
+	--Textual
 
-###Position###
-alignment middle_right
-gap_x 25
-gap_y 50
-minimum_size 300 740
-maximum_width 250
-###End Position###
+	extra_newline = false,
+	format_human_readable = true,
+	font = 'Sans Mono:size=9',
+	max_text_width = 0,
+	max_user_text = 16384,
+	override_utf8_locale = true,
+	short_units = true,
+	top_name_width = 21,
+	top_name_verbose = false,
+	uppercase = false,
+	use_spacer = 'none',
+	use_xft = true,
+	xftalpha = 1,
 
-###Borders###
-border_inner_margin 0
-border_outer_margin 10
-border_width 0
-draw_borders no
-draw_graph_borders yes
-draw_outline no
-draw_shades no
-###End Borders###
+	--Windows
 
-###Window###
-own_window yes
-own_window_argb_value 128
-own_window_argb_visual no
-
-#own_window_class systemConky
-own_window_class Conky
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
-#all options for own_window_type are normal, desktop, dock, panel or override
-own_window_type override
-own_window_transparent yes
-
-###End Window###
-
-###Font###
-max_text_width 0
-override_utf8_locale yes
-uppercase yes
-use_spacer none
-use_xft yes
-xftfont Sans Mono:size=8
-xftalpha 0.9
-###End Font###
-
-###Defining Colors###
-default_color FFFFFF
-default_outline_color 000000
-default_shade_color 000000
-color1 FFA726
-color2 dddddd
-color3 aaaaaa
-color4 888888
-color5 CCCCCC
-color6 FFFFFF
-###End Color###
+	own_window = true,
+	own_window_argb_value = 150,
+	own_window_argb_visual = true,
+	own_window_class = 'Conky',
+	own_window_colour = '#000000',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = no,
+	own_window_title = 'system_conky',
+	own_window_type = 'override',-- # options are: normal/override/dock/desktop/panel
 
 
+	--Colours
+
+	default_color = '#FFFFFF',  				-- default color and border color
+	color1 = '#FE5E52',
+	color2 = '#dddddd',
+	color3 = '#aaaaaa',
+	color4 = '#888888',
+	color5 = '#CCCCCC',
+	color6 = '#FFFFFF',
+
+	--Signal Colours
+	color7 = '#1F7411',  --green
+	color8 = '#FFA726',  --orange
+	color9 = '#F1544B',  --firebrick
 
 
-own_window_colour 555753
-TEXT
+	--Lua
+
+
+};
+
+
+conky.text = [[
 ${goto 12}+-----------------------------------------------------------+
 ${goto 15}|${goto 38}+-- ${color2}Node ${goto 155}${color4}${nodename}${font}${color}
-${goto 15}|${goto 38}+-- ${color2}Os${goto 155}${color4}${sysname}${color}
-${goto 15}|${goto 38}+-- ${color2}Kernel ${goto 155}${color4}${kernel}${color}
-${goto 15}|${goto 38}+-- ${color2}Machine${goto 155}${color4}${machine}${color}
+${goto 15}|${goto 38}+-- ${color2}Os${goto 155}${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${color}
+${goto 15}|${goto 38}+-- ${color2}Version${goto 155}${color4}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+${goto 15}|${goto 38}+-- ${color2}Kernel ${goto 155}${color1}${kernel}${color}
 ${goto 15}|
 ${goto 12}${color1}+----Memory ${color}
 ${goto 15}|${goto 40}|
@@ -164,14 +170,14 @@ ${goto 15}|${goto 38}+-- ${color2}Total${goto 155}${color4}${processes}${color}
 ${goto 15}|${goto 38}+-- ${color2}Running${goto 155}${color4}${running_processes}${color}
 ${goto 15}|${goto 40}|
 ${goto 15}|${goto 38}+-- ${color2}Cpu${color}
-${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 1}${goto 165}${color4}${top cpu 1}${top mem 1}${color}
-${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 2}${goto 165}${color4}${top cpu 2}${top mem 2}${color}
-${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 3}${goto 165}${color4}${top cpu 3}${top mem 3}${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 1}${goto 155}${color4}${top cpu 1}${top mem 1}${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 2}${goto 155}${color4}${top cpu 2}${top mem 2}${color}
+${goto 15}|${goto 40}|${goto 60}+-- ${color3}${top name 3}${goto 155}${color4}${top cpu 3}${top mem 3}${color}
 ${goto 15}|${goto 40}|
 ${goto 15}|${goto 38}+-- ${color2}Mem${color}
-${goto 15}|${goto 60}+-- ${color3}${top_mem name 1}${goto 165}${color4}${top_mem cpu 1}${top_mem mem 1}${color}
-${goto 15}|${goto 60}+-- ${color3}${top_mem name 2}${goto 165}${color4}${top_mem cpu 2}${top_mem mem 2}${color}
-${goto 15}|${goto 60}+-- ${color3}${top_mem name 3}${goto 165}${color4}${top_mem cpu 3}${top_mem mem 3}${color}
+${goto 15}|${goto 60}+-- ${color3}${top_mem name 1}${goto 155}${color4}${top_mem cpu 1}${top_mem mem 1}${color}
+${goto 15}|${goto 60}+-- ${color3}${top_mem name 2}${goto 155}${color4}${top_mem cpu 2}${top_mem mem 2}${color}
+${goto 15}|${goto 60}+-- ${color3}${top_mem name 3}${goto 155}${color4}${top_mem cpu 3}${top_mem mem 3}${color}
 ${goto 15}|
 ${goto 12}${color1}+----Net ${color}
 ${goto 15}|${goto 40}|
@@ -186,20 +192,20 @@ ${goto 15}|${goto 60}+-- ${color3}Total${goto 155}${color4}${totaldown enp2s0}${
 ${goto 15}|
 ${goto 12}${color1}+----Dropbox${color}
 ${if_running dropbox}\
-${goto 15}|${goto 40}| 
-${goto 15}|${goto 38}+-- ${color2}Status${color4}${alignr}${execi 3 python2 ~/.config/conky/dropbox.py status}${color}
+${goto 15}|${goto 40}|
+${goto 15}|${goto 38}+-- ${color2}Status${color4}${alignr}${execi 3 python2 ~/.config/conky/scripts/dropbox/dropbox.py status}${color}
 ${goto 15}|\
 ${else}\
-${goto 15}|${goto 40}| 
+${goto 15}|${goto 40}|
 ${goto 15}|${goto 38}+-- ${color2}Status${alignr}${color4} Offline${color}
 ${goto 15}|${endif}
 ${goto 12}${color1}+----Insync${color}
 ${if_running insync}\
-${goto 15}|${goto 40}| 
+${goto 15}|${goto 40}|
 ${goto 15}|${goto 38}+-- ${color2}Status${color4}${alignr}${execi 3 insync get_status | tr '[:upper:]' '[:lower:]'}${color}
 ${goto 15}|\
 ${else}\
-${goto 15}|${goto 40}| 
+${goto 15}|${goto 40}|
 ${goto 15}|${goto 38}+-- ${color2}Status${alignr}${color4} Offline${color}
 ${goto 15}|${endif}
 ${goto 12}${color1}+----Spotify Playing :\
@@ -209,11 +215,10 @@ ${goto 15}|${goto 38}+--${color2}Title${alignr}${color4}${execi 5 dbus-send --pr
 ${goto 15}|${goto 38}+--${color2}Artist${color4}${alignr}${execi 5 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 2 "artist"|egrep -v "artist"|egrep -v "array"|cut -b 27-|cut -d '"' -f 1|egrep -v ^$}${color}
 ${goto 15}|${goto 38}+--${color2}Album${color4}${alignr}${execi 5 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "album"|egrep -v "album"|cut -b 44-|cut -d '"' -f 1|egrep -v ^$}${color}
 ${goto 12}+-----------------------------------------------------------+
-${execi 6 ~/.config/conky/spotify-cover.sh}
-${image ~/.config/conky/last_album_pic.png -p 160,970 -s 80x80  -f 5}
 ${else}
 ${color}${goto 15}|${goto 40}|
 ${goto 15}|${goto 38}+-- ${color2}Status${color4}${alignr}Offline${color}
 ${goto 15}|
 ${goto 12}+-----------------------------------------------------------+
 ${endif}
+]]

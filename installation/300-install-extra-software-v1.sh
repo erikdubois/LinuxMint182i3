@@ -11,8 +11,8 @@ echo "Everything to work comfortably in i3 will be installed"
 echo "#########################################################"
 
 # core applications
-sudo apt-get install -y i3status
-#sudo apt-get install -y i3-wm  
+sudo apt-get install -y i3status i3lock
+#sudo apt-get install -y i3-wm
 sudo apt-get install -y dmenu
 
 # conky
@@ -54,15 +54,31 @@ sudo apt-get install -y gnome-terminal nemo
 # Cursor theme
 sudo apt-get install -y breeze-cursor-theme
 
+# appfinder
+sudo apt-get install -y xfce4-appfinder
 
-# playerctl for music 
+# gmrun
+sudo apt-get install -y gmrun
+
+# rofi
+sudo apt-get install -y rofi
+
+# screenshooters
+sudo apt-get install -y xfce4-screenshooter
+sudo apt-get install -y gnome-screenshot
+
+# nitrogen
+sudo apt-get install -y nitrogen
+
+
+# playerctl for music
 #https://github.com/acrisci/playerctl/releases
     if hash playerctl 2>/dev/null; then
     	echo "playerctl already installed"
     else
         wget https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb -O /tmp/playerctl
 		sudo dpkg -i /tmp/playerctl
-    fi 
+    fi
 
 
 #https://github.com/vivien/i3blocks
@@ -78,6 +94,9 @@ else
 	rm -rf /tmp/i3blocks
 
 fi
+
+
+
 
 
 echo
