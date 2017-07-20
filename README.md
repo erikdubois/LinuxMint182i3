@@ -7,8 +7,10 @@ Version : v2.0.1
 
 ## Installation of Linux Mint 18.2 Cinnamon, Mate or Xfce
 
-We start from an up-to-date and clean install of Linux Mint 18.2 Cinnamon, XFCE or MATE as described on 
+We start from an up-to-date and clean install of Linux Mint 18.2 Cinnamon, XFCE or MATE as described on
 http://erikdubois.be.
+
+The installation of 18.1 and 18.2 are identical.
 
 Installation instructions for the [Installation of Linux Mint 18.1 Cinnamon](http://erikdubois.be/how-to-install-linux-mint-18-1-cinnamon-and-redesign-it/)
 
@@ -19,32 +21,19 @@ Installation instructions for the [Installation of Linux Mint 18.1 Xfce](http://
 When you follow these movies/articles and the installation scripts on github, you will end up with all the needed icons and applications you will see me use in the I3 tutorials.
 
 
-Linux Mint 18.1
-
-![Screenshots](http://i.imgur.com/mNenIjf.jpg)
-
 
 ## Installation of i3 on Cinnamon, Mate or Xfce
 
 Checkout the installation articles on http://erikdubois.be/category/linux/i3/installation-of-i3/ and follow the instructions to come to these results.
 
 
-#Linux Mint 18.1 booted into i3
+#Linux Mint 18.2 Sonya Cinnamon booted into i3
 
 
-![Screenshots](http://i.imgur.com/CRKtVRV.jpg)
+![Screenshots](http://i.imgur.com/nJ1Lvg9.jpg)
 
 
-![Screenshots](http://i.imgur.com/9o7bZuk.jpg)
-
-
-![Screenshots](http://i.imgur.com/5RZaVMg.jpg)
-
-
-![Screenshots](http://i.imgur.com/irN98nN.jpg)
-
-
-![Screenshots](http://i.imgur.com/UcmfwmS.jpg)
+![Screenshots](http://i.imgur.com/B1mJ1Kw.jpg)
 
 
 
