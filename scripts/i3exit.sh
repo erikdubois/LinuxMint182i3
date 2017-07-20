@@ -1,4 +1,7 @@
 #!/bin/sh
+# Date    : 21/07/2017
+# Version : v2.0.1
+
 lock() {
     #i3lock -c 222222
     i3lock -i ~/.config/i3/scripts/lockscreen/lockscreen.png -t
