@@ -81,9 +81,6 @@ sudo apt-get install -y gmrun
 # rofi
 sudo apt-get install -y rofi
 
-# atom
-sudo apt-get install -y atom
-
 # screenshooters
 sudo apt-get install -y xfce4-screenshooter
 sudo apt-get install -y gnome-screenshot
