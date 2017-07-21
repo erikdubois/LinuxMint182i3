@@ -13,9 +13,6 @@
 
 echo "Let us install i3"
 
-#no need to run this if you want the latest version from github
-#sh 50-install-i3-version-4.11-from-repositories-v1.sh
-
 sh 100-install-dependencies-v1.sh
 sh 110-install-xcb-util-xrm-v1.sh
 sh 120-install-i3-gaps-next-v1.sh
@@ -36,6 +33,6 @@ sh 600-copy-personal-settings.sh
 sh 900-copy-i3-files-to-config-i3-folder-v2.sh
 
 echo "################################################################"
-echo "##############  Auto script terminated         #################"
+echo "##############                     Auto script terminated                        #################"
 echo "################################################################"
 
