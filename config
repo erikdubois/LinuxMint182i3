@@ -452,7 +452,6 @@ exec --no-startup-id clipit
 #Conky
 exec --no-startup-id conky -c ~/.config/i3/system-overview
 exec --no-startup-id conky -c ~/.config/i3/system-shortcuts
-exec --no-startup-id conky -c ~/.config/i3/conky-skeleton
 
 
 #####################################################################################################################
