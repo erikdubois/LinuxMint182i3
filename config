@@ -419,7 +419,7 @@ for_window [class="Spotify"] focus
 # you may see a wheel - hashtag out things you do not want
 
 #Authentication dialog
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # Updater
 exec --no-startup-id mintupdate-launcher
