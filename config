@@ -348,6 +348,7 @@ font pango:Noto Mono Regular 13
 
 # Workspace 1 browser related
 assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
+assign [class="Chromium-browser|Google-chrome"]                                     → 1
 
 # Workspace 2 text editor related
 assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]       → 2
@@ -391,8 +392,10 @@ for_window [class="Spotify"] move to workspace 10
 # USER APPLICATIONS TO START AT BOOT
 
 #browser
-exec --no-startup-id vivaldi-snapshot
-for_window [class="Vivaldi-snapshot"] focus
+#exec --no-startup-id vivaldi-snapshot
+exec --no-startup-id chromium-browser
+#for_window [class="Vivaldi-snapshot"] focus
+for_window [class="Chromium-browser"] focus
 
 #text-editor
 #exec --no-startup-id geany
@@ -510,7 +513,7 @@ bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;workspace 1;fo
 bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;workspace 1;focus
 bindsym control+mod1+f exec --no-startup-id firefox;workspace 1; focus
 bindsym control+mod1+v exec --no-startup-id vivaldi-snapshot;workspace 1; focus
-bindsym control+mod1+g exec --no-startup-id chromium;workspace 1;focus
+bindsym control+mod1+g exec --no-startup-id chromium-browser;workspace 1;focus
 
 #workspace 2 related
 #bindsym $mod+F2 exec --no-startup-id geany;workspace 2;focus

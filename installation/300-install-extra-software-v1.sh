@@ -88,7 +88,8 @@ sudo apt-get install -y gnome-screenshot
 # nitrogen
 sudo apt-get install -y nitrogen
 
-
+# chromium
+sudo apt-get install -y chromium-browser
 
 # playerctl for music
 #https://github.com/acrisci/playerctl/releases
