@@ -11,6 +11,11 @@ echo "###############################"
 echo "Xcb-util-xrm"
 echo "###############################"
 
+if [ -f "/usr/include/xcb/xcb_xrm.h" ]; then
+    echo "It seems \"Xcb-util-xrm\" is installed already. Skipping reinstallation."
+    exit
+fi
+
 # dependancy on xcb-util-xrm
 
 rm -rf /tmp/xcb-util-xrm
