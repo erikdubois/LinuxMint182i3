@@ -162,7 +162,7 @@ echo "################################################################"
 echo "Downloading the files from github to /tmp directory " $GITHUB
 
 
-git clone https://github.com/erikdubois/$GITHUB /tmp/$GITHUB
+git clone https://github.com/proger4ever/$GITHUB /tmp/$GITHUB
 
 
 echo "################################################################"
