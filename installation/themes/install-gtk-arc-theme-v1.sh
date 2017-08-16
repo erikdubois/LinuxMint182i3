@@ -11,18 +11,25 @@
 #
 ##################################################################################################################
 
-#https://github.com/horst3180/arc-theme
+#https://github.com/horst3180/$THEME_PACKAGE
 
-rm -rf /tmp/arc-theme
+THEME_PACKAGE="arc-theme"
+
+if [ -d "/usr/share/themes/Arc" ]; then
+    echo "It seems \"$THEME_PACKAGE\" is installed already. Skipping reinstallation."
+    exit
+fi
+
+rm -rf /tmp/$THEME_PACKAGE
 
 sudo apt-get install build-essential autoconf automake pkg-config libgtk-3-0 libgtk-3-dev -y
 sudo apt-get -f install
-git clone https://github.com/horst3180/arc-theme --depth 1 /tmp/arc-theme
-cd /tmp/arc-theme
+git clone https://github.com/horst3180/$THEME_PACKAGE --depth 1 /tmp/$THEME_PACKAGE
+cd /tmp/$THEME_PACKAGE
 sh autogen.sh --prefix=/usr
 sudo make install
 
-rm -rf /tmp/arc-theme
+rm -rf /tmp/$THEME_PACKAGE
 
 # sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
 
