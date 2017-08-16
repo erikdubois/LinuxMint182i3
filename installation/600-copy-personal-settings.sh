@@ -44,7 +44,7 @@ cp settings/settings.ini ~/.config/gtk-3.0/
 
 #echo "Making sure gnome-screenshot saves in jpg - smaller in kb"
 
-#sh settings/gnome-screenshot/set-gnome-screenshot-to-save-as-jpg.sh
+#bash settings/gnome-screenshot/set-gnome-screenshot-to-save-as-jpg.sh
 
 echo "Copy/pasting gimp scripts and themes"
 
