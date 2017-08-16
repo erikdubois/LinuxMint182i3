@@ -15,10 +15,12 @@
 
 # repo for spotify
 
-sudo add-apt-repository -y ppa:dawidd0811/neofetch
+THE_PPA="dawidd0811/neofetch"
 
-# getting new info of this new repo
-sudo apt-get -y update
+if [[ -z `grep -R "$THE_PPA" /etc/apt/` ]]; then
+    sudo add-apt-repository -y ppa:$THE_PPA
+    sudo apt-get update
+fi
 
 # installing
 sudo apt install neofetch -y

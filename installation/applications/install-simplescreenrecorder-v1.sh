@@ -11,9 +11,13 @@
 #
 ##################################################################################################################
 
+THE_PPA="maarten-baert/simplescreenrecorder"
 
-sudo add-apt-repository -y ppa:maarten-baert/simplescreenrecorder
-sudo apt-get update
+if [[ -z `grep -R "$THE_PPA" /etc/apt/` ]]; then
+    sudo add-apt-repository -y ppa:$THE_PPA
+    sudo apt-get update
+fi
+
 sudo apt-get install -y simplescreenrecorder
 
 echo "################################################################"
