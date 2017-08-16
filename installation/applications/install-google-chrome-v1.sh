@@ -14,12 +14,12 @@
 
 # donwloading and installing google chrome for netflix e.g.
 
-$REPO_PACKAGE="google-chrome-stable"
-$FILE_PACKAGE="$FILE_PACKAGE"
+REPO_PACKAGE="google-chrome-stable"
+FILE_PACKAGE="google-chrome-stable_current_amd64.deb"
 
 
 if [[ ! -z `dpkg --get-selections $REPO_PACKAGE | grep install` ]]; then
-    echo "$REPO_PACKAGE already installed.";
+    echo "package \"$REPO_PACKAGE\" already installed.";
     exit;
 fi
 

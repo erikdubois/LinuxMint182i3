@@ -11,12 +11,21 @@
 #
 ##################################################################################################################
 
-rm /tmp/sublime-text_build-3126_amd64.deb
+REPO_PACKAGE="sublime-text"
+FILE_PACKAGE="sublime-text_build-3126_amd64.deb"
 
-wget https://download.sublimetext.com/sublime-text_build-3126_amd64.deb -O /tmp/sublime-text_build-3126_amd64.deb
-sudo dpkg -i /tmp/sublime-text_build-3126_amd64.deb
 
-rm /tmp/sublime-text_build-3126_amd64.deb
+if [[ ! -z `dpkg --get-selections $REPO_PACKAGE | grep install` ]]; then
+    echo "package \"$REPO_PACKAGE\" already installed.";
+    exit;
+fi
+
+rm /tmp/$FILE_PACKAGE
+
+wget https://download.sublimetext.com/$FILE_PACKAGE -O /tmp/$FILE_PACKAGE
+sudo dpkg -i /tmp/$FILE_PACKAGE
+
+rm /tmp/$FILE_PACKAGE
 
 
 ##################################################################################################################
