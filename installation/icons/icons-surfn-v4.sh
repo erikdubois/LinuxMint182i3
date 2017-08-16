@@ -11,11 +11,19 @@
 #
 ##################################################################################################################
 
+ICON_PACKAGE="Surfn"
+ICON_FOLDER_TO_CHECK="Surfn"
+
 # cleaning tmp
-[ -d /tmp/Surfn ] && rm -rf /tmp/Surfn
+[ -d /tmp/$ICON_PACKAGE ] && rm -rf /tmp/$ICON_PACKAGE
 
 # if there is no hidden folder then make one
 [ -d $HOME"/.icons" ] || mkdir -p $HOME"/.icons"
+
+if [ -d $HOME"/.icons/$ICON_FOLDER_TO_CHECK" ]; then
+    echo "It seems \"$ICON_PACKAGE\" is installed already. Skipping reinstallation."
+    exit
+fi
 
 
 ##################################################################################################################
@@ -135,12 +143,12 @@ case $DISTRO in
 		;;
 esac
 
-git clone https://github.com/erikdubois/Surfn /tmp/Surfn
-find /tmp/Surfn -maxdepth 1 -type f -exec rm -rf '{}' \;
-cp -rf /tmp/Surfn/* ~/.icons/
+git clone https://github.com/erikdubois/$ICON_PACKAGE /tmp/$ICON_PACKAGE
+find /tmp/$ICON_PACKAGE -maxdepth 1 -type f -exec rm -rf '{}' \;
+cp -rf /tmp/$ICON_PACKAGE/* ~/.icons/
 
 # cleaning tmp
-[ -d /tmp/Surfn ] && rm -rf /tmp/Surfn
+[ -d /tmp/$ICON_PACKAGE ] && rm -rf /tmp/$ICON_PACKAGE
 
 
 

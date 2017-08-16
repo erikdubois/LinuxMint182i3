@@ -11,24 +11,31 @@
 #
 ##################################################################################################################
 
+ICON_PACKAGE="sardi"
+ICON_FOLDER_TO_CHECK="Sardi"
 
 # cleaning tmp
-[ -d /tmp/sardi ] && rm -rf /tmp/sardi
+[ -d /tmp/$ICON_PACKAGE ] && rm -rf /tmp/$ICON_PACKAGE
 
 # if there is no hidden folder then make one
 [ -d $HOME"/.icons" ] || mkdir -p $HOME"/.icons"
 
-wget -O /tmp/sardi.tar.gz "https://sourceforge.net/projects/sardi/files/latest/download?source=files"
-mkdir /tmp/sardi
-tar -zxf /tmp/sardi.tar.gz -C /tmp/sardi
-rm /tmp/sardi.tar.gz
-cp -rf /tmp/sardi/* ~/.icons/
+if [ -d $HOME"/.icons/$ICON_FOLDER_TO_CHECK" ]; then
+    echo "It seems \"$ICON_PACKAGE\" is installed already. Skipping reinstallation."
+    exit
+fi
+
+wget -O /tmp/$ICON_PACKAGE.tar.gz "https://sourceforge.net/projects/sardi/files/latest/download?source=files"
+mkdir /tmp/$ICON_PACKAGE
+tar -zxf /tmp/$ICON_PACKAGE.tar.gz -C /tmp/$ICON_PACKAGE
+rm /tmp/$ICON_PACKAGE.tar.gz
+cp -rf /tmp/$ICON_PACKAGE/* ~/.icons/
 
 # cleaning tmp
-[ -d /tmp/sardi ] && rm -rf /tmp/sardi
+[ -d /tmp/$ICON_PACKAGE ] && rm -rf /tmp/$ICON_PACKAGE
 
 
 
 echo "################################################################"
-echo "###################    icons sardi done   ######################"
+echo "###################    icons $ICON_PACKAGE done   ######################"
 echo "################################################################"
