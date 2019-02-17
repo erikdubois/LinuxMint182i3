@@ -64,7 +64,7 @@ sudo apt-get install -y lsb-release
 
 # panel icon for sound
 # sudo apt-get install -y volti
-sudo apt-get install  -y pasystray paman paprefs pavumeter pulseaudio-module-zeroconf
+sudo apt-get install  -y pasystray  paprefs pavumeter pulseaudio-module-zeroconf
 
 # different terminal for nemo
 sudo apt-get install -y gnome-terminal nemo
@@ -109,7 +109,9 @@ else
 	rm -rf /tmp/i3blocks
 	git clone https://github.com/vivien/i3blocks.git /tmp/i3blocks
 	cd /tmp/i3blocks
-	make clean all
+    ./autogen.sh
+    ./configure
+	make
 	sudo make install
 	rm -rf /tmp/i3blocks
 
