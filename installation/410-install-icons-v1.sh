@@ -7,13 +7,13 @@ set -e
 #
 ##################################################################################################################
 
-sh icons/icons-sardi-extra-v4.sh
+bash icons/icons-sardi-extra-v4.sh
 
 
-sh icons/icons-sardi-v3.sh
+bash icons/icons-sardi-v3.sh
 
 
-sh icons/icons-surfn-v4.sh
+bash icons/icons-surfn-v4.sh
 
 
 

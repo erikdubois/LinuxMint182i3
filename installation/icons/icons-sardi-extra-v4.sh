@@ -11,12 +11,20 @@ set -e
 #
 ##################################################################################################################
 
+ICON_PACKAGE="Sardi-Extra"
+ICON_FOLDER_TO_CHECK="Sardi-Colora-Aquamarine"
 
 # cleaning tmp
-[ -d /tmp/Sardi-Extra ] && rm -rf /tmp/Sardi-Extra
+[ -d /tmp/$ICON_PACKAGE ] && rm -rf /tmp/$ICON_PACKAGE
 
 # if there is no hidden folder then make one
 [ -d $HOME"/.icons" ] || mkdir -p $HOME"/.icons"
+
+
+if [ -d $HOME"/.icons/$ICON_FOLDER_TO_CHECK" ]; then
+    echo "It seems \"$ICON_PACKAGE\" is installed already. Skipping reinstallation."
+    exit
+fi
 
 
 ##################################################################################################################
@@ -137,13 +145,13 @@ case $DISTRO in
 esac
 
 
-git clone https://github.com/erikdubois/Sardi-Extra /tmp/Sardi-Extra
-find /tmp/Sardi-Extra -maxdepth 1 -type f -exec rm -rf '{}' \;
+git clone https://github.com/erikdubois/$ICON_PACKAGE /tmp/$ICON_PACKAGE
+find /tmp/$ICON_PACKAGE -maxdepth 1 -type f -exec rm -rf '{}' \;
 
-cp -rf /tmp/Sardi-Extra/* ~/.icons/
+cp -rf /tmp/$ICON_PACKAGE/* ~/.icons/
 
 # cleaning tmp
-[ -d /tmp/Sardi-Extra ] && rm -rf /tmp/Sardi-Extra
+[ -d /tmp/$ICON_PACKAGE ] && rm -rf /tmp/$ICON_PACKAGE
 
 
 

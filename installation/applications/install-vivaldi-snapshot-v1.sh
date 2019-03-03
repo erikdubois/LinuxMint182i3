@@ -12,11 +12,14 @@
 ##################################################################################################################
 
 
+REPO="deb http://repo.vivaldi.com/archive/deb/ stable main"
 
+if [[ -z `grep -R "$REPO" /etc/apt/` ]]; then
+    sudo add-apt-repository "$REPO"
+    wget -qO- http://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
+    sudo apt update
+fi
 
-sudo add-apt-repository 'deb http://repo.vivaldi.com/archive/deb/ stable main'
-wget -qO- http://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
-sudo apt update
 sudo apt install vivaldi-snapshot
 
 

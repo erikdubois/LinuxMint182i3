@@ -13,8 +13,14 @@
 
 
 # Downloading and installing latest variety
-sudo add-apt-repository ppa:peterlevi/ppa -y
-sudo apt-get update
+
+THE_PPA="peterlevi/ppa"
+
+if [[ -z `grep -R "$THE_PPA" /etc/apt/` ]]; then
+    sudo add-apt-repository -y ppa:$THE_PPA
+    sudo apt-get update
+fi
+
 sudo apt-get install variety -y
 
 

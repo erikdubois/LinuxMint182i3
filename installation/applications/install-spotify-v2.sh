@@ -11,7 +11,12 @@
 #
 ##################################################################################################################
 
+REPO_PACKAGE="spotify-client"
 
+if [[ ! -z `dpkg --get-selections $REPO_PACKAGE | grep install` ]]; then
+    echo "package \"$REPO_PACKAGE\" already installed.";
+    exit;
+fi
 
 # 1. Add the Spotify repository signing key to be able to verify downloaded packages
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886

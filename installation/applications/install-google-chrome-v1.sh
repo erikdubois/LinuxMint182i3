@@ -14,13 +14,22 @@
 
 # donwloading and installing google chrome for netflix e.g.
 
-rm /tmp/google-chrome-stable_current_amd64.deb
+REPO_PACKAGE="google-chrome-stable"
+FILE_PACKAGE="google-chrome-stable_current_amd64.deb"
+
+
+if [[ ! -z `dpkg --get-selections $REPO_PACKAGE | grep install` ]]; then
+    echo "package \"$REPO_PACKAGE\" already installed.";
+    exit;
+fi
+
+rm /tmp/$FILE_PACKAGE
 
 echo "downloading google chrome latest stable edition"
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/google-chrome-stable_current_amd64.deb
-sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/$FILE_PACKAGE -O /tmp/$FILE_PACKAGE
+sudo dpkg -i /tmp/$FILE_PACKAGE
 
-rm /tmp/google-chrome-stable_current_amd64.deb
+rm /tmp/$FILE_PACKAGE
 
 echo "################################################################"
 echo "###################    google chrome installed #################"
